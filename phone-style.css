@@ -1,0 +1,316 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --btn-color: #B83B5E;
+    --btn-hover-color: #F08A5D;
+    --btn-hover2-color: #6A2C70
+}
+
+.inline{
+    display: inline;
+}
+
+
+
+body, input{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    position:absolute;
+    width: 100%;
+    background-color:#fff;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index:-1;
+}
+.panels-container{
+    width: 50%;
+    z-index: 1;
+}
+
+
+.container::before{
+    content: "";
+    position: absolute;
+    /* height:200rem;
+    width: 200rem; */
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 100%;
+    background-color:var(--btn-hover-color);
+    /* border-radius: 50%; */
+    border-radius: 0;
+    z-index:4;
+    transition: all 1s;
+}
+
+.form-container{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+h5{
+    font-size:1rem;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.input-field{
+    max-width: 35rem;
+    width:100%;
+    height: 2.5rem;
+    background-color: #f0f0f0;
+    margin: 0.5rem;
+    border-radius: 5rem;
+    display:grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+
+.input-field i{
+    text-align: center;
+    line-height: 2rem;
+    font-size:1.2rem ;
+    color: #aaa;
+}
+
+.input-field input{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.input-field input:placeholder-shown{
+   
+    font-weight:500;
+}
+
+.button{
+    width: 10rem;
+    height: 3rem;
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    background-color:var(--btn-color);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    transition: background-color 0.25s, opacity 0.75s;
+}
+
+.button:hover{
+    background-color: var(--btn-hover2-color);
+    cursor: pointer;
+}
+
+.other-method-text{
+    padding: 0.7rem 0;
+    font-size: 1.1rem;
+
+}
+
+.other-method-icons{
+    display: flex;
+    justify-content: center;
+}
+
+.icon{
+    border: 1px solid black;
+    height:4rem;
+    width: 4rem;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    transition: all 0.25s;
+}
+
+.icon:hover{
+    color: var(--btn-hover-color);
+    border-color: var(--btn-hover-color);
+    transform: scale(105%);
+
+}
+
+.login-signup{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    /* transform: translate(-50%,-50%); */
+    
+}
+
+form.login-form{
+    z-index: 3;
+
+}
+
+.signup{
+    z-index: 2;
+    opacity: 0;
+    top: 25%;
+    left: -70%;
+    width: 80%;
+    
+    transition: all 1s;
+    
+}
+.register .signup{
+    opacity: 1;
+    display:block;
+    transform: translateX(100%);
+    
+}
+
+.login{
+    opacity: 1;
+    position: absolute;
+    top: 20%;
+    left: 17.5%;
+    display: block;
+    transition: all 0.5s;
+    width: 70%;
+}
+
+.register .login{
+    opacity: 0;
+    transform: translate(100%,0%);
+}
+
+
+.left-panel{
+    padding: none;
+    width: 50%;
+    position: absolute;
+    top:1rem;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register.left-panel {
+    display: none;
+    
+}
+
+.register.right-panel{
+    
+    display: none;
+}
+
+.right-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: none;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top:1rem;
+    
+
+}
+
+.panels-container h3{
+    font-weight: 600;
+}
+
+.register.container::before{
+    transform: translate(200%,0);
+}
+
+
+
+/*MESSAGES*/
+
+.errormsg{
+    color: red;
+    display: none;
+}
+
+.show.errormsg{
+    display: block;
+}
+
+.successmsg{
+    color: green;
+    display: none;
+}
+
+.show.successmsg{
+    display: block;
+}
+
+.errormsg1{
+    color: red;
+    display: none;
+}
+
+.errormsg2{
+    color: red;
+    display: none;
+}
+
+.errormsg3{
+    color: red;
+    display: none;
+}
+
+.errormsg4{
+    color: red;
+    display: none;
+}
+
+.errormsg1.show{
+    color: red;
+    display: block;
+}
+
+.show.errormsg2{
+    color: red;
+    display: block;
+}
+
+.show.errormsg3{
+    color: red;
+    display: block;
+}
+
+.show.errormsg4{
+    color: red;
+    display: block;
+}

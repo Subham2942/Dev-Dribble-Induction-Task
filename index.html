@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-width:1200px)" href="login-style.css">
+    <link rel="stylesheet" media="screen and  (max-width:1200px)" href="phone-style.css" >
+    <title>Induction Task</title>
+</head>
+<body>
+    <section class="container">
+
+        
+        <div class="forms-container">
+            <div class="login-signup login">
+                <div class="log-in ">
+                    <form action="" id="login-form" class="login-form">
+                        <h1 class="center heading">Login</h1>
+                        <p> <u>Default:</u>  <br> <b> username:</b> user1 <br> <b>password:</b> password </p>
+                        <p class="errormsg">
+                            Either username doesn't exist or password doesn't match
+                        </p>
+                            <div class="box input-field">
+                             <!-- <label for="username">Username</label> -->
+                             <i class="fa fa-user"></i>
+                             <input class="input" type="text" placeholder="Enter Username" id="username" name="username" required autocomplete="off"> 
+                            </div>
+                            <div class="box input-field">
+                                <!-- <label for="password">Password</label> -->
+                                <i class="fa fa-lock"></i>
+                                <input class="input" type="password" placeholder="Enter Password" id="password" name="password" required>
+                            </div>
+                            <button type="submit" id="login" class="button">Login </button>
+                            <p class="other-method-text ">Or Sign Up with </p>
+                            <div class="other-method-icons">
+                                <a href="#" class="icon"><i class="fa fa-google"></i></a>
+                                <p class="other-method-text inline">or</p>
+                                <a href="#" class="icon"><i class="fa fa-facebook"></i></a>
+        
+                            </div>
+                    </form>
+                </div>
+        </div>
+        <div class="login-signup signup">
+        <div class="sign-up ">
+            
+            <form action="" id="signup-form" class="signup-form" style="display:non">
+                <h1 class="center heading">Sign-Up</h1>
+                <p class="successmsg">
+                    Account Successfully Created (Temporarily) <br> Now go back and Log-in to your account <br> DO NOT RELOAD THE PAGE
+                </p>
+                <div class="box input-field">
+                    <!-- <label for="username">Username</label> -->
+                    <i class="fa fa-envelope"></i>
+                    <input class="input" class="input" type="email" placeholder="Enter Email" id="email" name="email" required autocomplete="off">
+                </div>
+                <p class="errormsg1">
+                    *Email already registered
+                </p>
+                <div class="box input-field">
+                    <!-- <label for="username">Username</label> -->
+                    <i class="fa fa-user-plus"></i>
+                    <input class="input" class="input" type="text" placeholder="Create Username" id="newUsername" name="newUsername" required autocomplete="off">
+                </div>
+                <p class="errormsg2">
+                    *Username already Taken
+                </p>
+                <div class="box input-field">
+                    <!-- <label for="password">Password</label> -->
+                    <i class="fa fa-lock"></i>
+                    <input class="input" type="password" placeholder="Create Password (minimum 6 characters)" id="newPassword" name="newPassword" required>
+                </div>
+                <p class="errormsg3">
+                    *password should be more than 6 characters
+                </p>
+                <div class="box input-field">
+                    <i class="fa fa-lock"></i>
+                    <input class="input" type="password" placeholder="Confirm Password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <p class="errormsg4">
+                    *password doesn't match
+                </p>
+                <button type="submit" id="signup" class="button">  Sign Up</button>
+                <p class="other-method-text">Or Sign Up with </p>
+                    <div class="other-method-icons">
+                        <a href="#" class="icon"><i class="fa fa-google"></i></a>
+                        <p class="other-method-text inline">or</p>
+                        <a href="#" class="icon"><i class="fa fa-facebook"></i></a>
+        
+                    </div>
+                
+            </form>
+        </div>
+
+    </div>
+</div>
+        
+    </section>
+    <section class="panels-container">
+        <div class="left-panel">
+            <h5>
+                Don't have an account yet?
+            </h5>
+            <button id="switch-to-sign-up" class="button">Sign-Up</button>
+        </div>
+        <div class="right-panel register">
+            <h5>
+                Already have an account?
+            </h5>
+            <button id="switch-to-log-in" class="button register">Log-In</button>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/9c911b980f.js" crossorigin="anonymous"></script>
+    <script src="form.js"></script>
+</body>
+</html>
